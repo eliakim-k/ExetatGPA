@@ -19,7 +19,7 @@ def main():
 // editable CMS entries and their IDs are preserved; no baseline reseed is used.
 export function registeredResearchToolCard(section){
  if(section.id!=='/published-work/block-1')return '';
- return '<article class="research-card software-card" data-tool="exetatgpa"><div class="card-body"><p class="category">Research tool · Education</p><h3><a href="https://github.com/eliakim-k/ExetatGPA">ExetatGPA</a></h3><p>EXETAT cohort standing and eight named reference scales, with bounds for unpublished scores.</p></div><a class="text-link" href="https://github.com/eliakim-k/ExetatGPA">View on GitHub</a></article>';
+ return '<article class="research-card software-card" data-tool="exetatgpa"><div class="card-body"><p class="category">Research tool · Education</p><h3><a href="https://github.com/eliakim-k/ExetatGPA">ExetatGPA</a></h3><p>EXETAT cohort standing and eight named reference scales, with bounds for unpublished scores.</p></div><a class="text-link" href="https://github.com/eliakim-k/ExetatGPA">View on GitHub</a><a class="text-link" href="https://contributions-ledger.org/tools/exetatgpa/">Open calculator</a></article>';
 }
 ''';put(p,s)
     p=SITE/'src/worker.js';s=p.read_text(encoding='utf8');s=s.replace('contributionEntry,contributionCard,contributionDetail}', 'contributionEntry,contributionCard,contributionDetail,registeredResearchToolCard}')
