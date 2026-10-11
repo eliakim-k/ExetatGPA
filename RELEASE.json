@@ -1,0 +1,15 @@
+{
+  "release": "1.0.0",
+  "date": "2026-10-12",
+  "calculator": "https://contributions-ledger.org/tools/exetatgpa/",
+  "source": "https://github.com/eliakim-k/ExetatGPA",
+  "cv_entry": "https://eliakimkambale.com/contributions/#software",
+  "cv_destination": "https://github.com/eliakim-k/ExetatGPA",
+  "pages_deployment": "e4f9eeb2-2c6f-450e-850b-e6403e212b57",
+  "cv_commit": "f6994aaf3e25e6acacf93fb43e5dfdfb8d710cc8",
+  "cv_build": "9ab5658f-8012-4c99-91bf-3022bfb65319",
+  "numerical_tests": 9,
+  "production_http_checks": 28,
+  "browser_calculation": "59% in 2021: top 28.70%; corresponding 2022 cohort position: 61.38%",
+  "scope": "Aggregate retained data and calculator only. Manuscript, Supplementary Information and original scientific work units are unchanged. No claim approval is granted by this release."
+}
