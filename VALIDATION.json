@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "retainedThresholdPairs": 676,
+  "observedAppPairs": 648,
+  "unobservedThresholdInputsWithheld": 28,
+  "usCategoryComparisons": 3380,
+  "externalChecks": 14196,
+  "maxExternalResidual": 9.959272517789941e-9,
+  "sessionChecks": 10368,
+  "maxSessionResidual": 4.999378688808065e-11,
+  "ties": "inclusive",
+  "usBoundaries": "exact_integer_cross_products",
+  "source": "retained approved outputs, not invented conversions"
+}

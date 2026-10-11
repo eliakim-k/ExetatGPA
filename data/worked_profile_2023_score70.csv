@@ -1,0 +1,9 @@
+country,reference,point_display,source_rank_range_display,source_and_target_missing_range_display,population_or_resolution_note
+United States,2016 SAT-taker reported GPA categories among respondents,A+,A to A+,A to A+,"Reported category, not an interpolated numerical GPA"
+France,2025 general baccalaureate final average,17.4 / 20,14.8 to 17.6,not_recomputed_for_non_US_references,Final average on 0 to 20
+Japan,2024 Common Test Mathematics I/A,91 / 100,68 to 93,not_recomputed_for_non_US_references,Subject score on 0 to 100
+South Korea,2024 CSAT Mathematics area,136,118 to 137,not_recomputed_for_non_US_references,Standard score and official grade band
+United Kingdom,England summer 2024 A-level outcomes,A*,A to A*,not_recomputed_for_non_US_references,Grade category across all subject entries
+Germany,2024 national Abitur final grade,1.0,1.0 to 1.8,not_recomputed_for_non_US_references,"Final grade, 1.0 best to 4.0 passing"
+Türkiye,2024 YKS TYT examination score,400-419,260-279 to 400-419,not_recomputed_for_non_US_references,Published score thresholds from 100 to 500
+South Africa,2024 NSC Mathematics performance band,80-89%,50-59% to 80-89%,not_recomputed_for_non_US_references,Official ten-point percentage band

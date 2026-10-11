@@ -1,0 +1,8 @@
+dist/
+node_modules/
+checks/
+WORK_UNIT.json
+WORK_UNIT_RESULT.json
+.wrangler/
+*.zip
+*.log

@@ -1,0 +1,95 @@
+{
+  "inputs": [
+    {
+      "path": "data/annual_successful_score_histogram.csv",
+      "source": "submission_v0/04_work_units/W016_published_score_inflation/intermediate/annual_successful_score_histogram.csv",
+      "sha256": "05fb088b2625e948915fbbdae21e156497872223a4c667f207e83e1116a9ff61"
+    },
+    {
+      "path": "data/retained_target_distributions.csv",
+      "source": "submission_v0/04_work_units/W145_us_gpa_category_reference/inputs/retained_target_distributions.csv",
+      "sha256": "a3d80358fe9aacbea15d0d709ad8a5247f5c35c92a7488c221d2565aa44a1795"
+    },
+    {
+      "path": "data/target_categories.csv",
+      "source": "submission_v0/04_work_units/W145_us_gpa_category_reference/intermediate/target_categories.csv",
+      "sha256": "e3bf410226baebf9afba80117c73bd247c3817dfe24e48cd33bb7553225b60f7"
+    },
+    {
+      "path": "data/worked_profile_2023_score70.csv",
+      "source": "submission_v0/04_work_units/W145_us_gpa_category_reference/outputs/worked_profile_2023_score70.csv",
+      "sha256": "4b02e36f6e4c7c4dcbdbfe4d7152eef052cde2ec75b1f936f67f51e0259b619d"
+    },
+    {
+      "source": "submission_v0/04_work_units/W145_us_gpa_category_reference/inputs/session_score_diagnostics.csv",
+      "sha256": "652485e30dd5476b5fc2eca706b809b2fbda16b129aa8d67bc5dfcad359dc1c2",
+      "role": "Aggregate participant and unpublished counts"
+    },
+    {
+      "source": "submission_v1/claims/C79/VERDICT.json",
+      "sha256": "fc49f8b2d4937997ba2c25bdfd4054fe12d0111adfe3b1f361c809b5fee70d4b",
+      "role": "Approved eight-reference scientific interpretation"
+    },
+    {
+      "source": "project_records/claim_history/C79_W145_COMPOSITE_SCIENTIFIC_APPROVAL_2026-10-03.json",
+      "sha256": "4e1942b1a05e6978e69b4e31fff26af6f6d3b7866f236d3b8fa5bee2311e3f6c",
+      "role": "Scientific approval"
+    },
+    {
+      "source": "project_records/delegated_draft_campaign/2026-10-07/EXETATGPA_APP_THREAD_20261012/TASK_BRIEF.json",
+      "sha256": "d17e8f3da3e018ce1d0661c627627c9b2e420702dcea24e17bef8bea49b5cd8d",
+      "role": "Implementation and publication authorization"
+    }
+  ],
+  "reference_sources": [
+    {
+      "reference": "2016 pre-March SAT reported high-school GPA categories",
+      "url": "https://reports.collegeboard.org/media/pdf/2016-total-group-sat-suite-assessments-annual-report.pdf",
+      "sha256": "d767f74b9fc3ef8cfc71cb782993e88ff1f010d48c019be56c39ba4d74f2be25",
+      "rule": "exact_cumulative_best_category"
+    },
+    {
+      "reference": "2025 general baccalaureate final average",
+      "url": "https://www.education.gouv.fr/sites/default/files/document/bilan-bac-2025-voie-g-n-rale-xlsx-478607.xlsx",
+      "sha256": "31e0de2ab2e3304a6422a755ddf4d60d35feb7fda429e7fd2aa0397bffc813e0",
+      "rule": "linear_frequency_interpolation"
+    },
+    {
+      "reference": "2024 Common Test Mathematics I/A",
+      "url": "https://www.dnc.ac.jp/albums/abm.php?d=679&f=abm00004530.csv",
+      "sha256": "5612372490e888a51155cbb52a053ae0568c395c97ecc36e4ae03c1d5cebfeb8",
+      "rule": "empirical_step"
+    },
+    {
+      "reference": "2024 CSAT Mathematics area",
+      "url": "https://www.moe.go.kr/boardCnts/fileDown.do?fileSeq=8637cefdf7425b7ac5a59faf4412bd32&m=020402&s=moe",
+      "sha256": "6d1f6a4660cbba4dddf5d633c551a2684aa2e86eaac77eaafd4f0c184c07dae8",
+      "rule": "empirical_step"
+    },
+    {
+      "reference": "England summer 2024 A-level outcomes",
+      "url": "https://www.jcq.org.uk/wp-content/uploads/sites/2/2026/01/AS-and-A-level-results-summer-2024.pdf",
+      "sha256": "a501385863aefd690330f33115fc1956c9bdecaee9d26dca3eb14bd966b1de2e",
+      "rule": "empirical_step"
+    },
+    {
+      "reference": "2024 national Abitur final grade",
+      "url": "https://www.kmk.org/fileadmin/Dateien/pdf/Statistik/Dokumentationen/Aus_Abiturnoten_2024.xlsx",
+      "sha256": "662b56a95fbb7ca2d33753d9bff1d2c321c31ab96d31323e977ccbf1a31d6443",
+      "rule": "lower_is_better_step"
+    },
+    {
+      "reference": "2024 YKS TYT examination score",
+      "url": "https://dokuman.osym.gov.tr/pdfdokuman/2024/YKS/sayisalbilgiler16072024.pdf",
+      "sha256": "aedb5f6352de26a4d25e29a4176f5e7949d64ea3aa3153cc6b06d0d06399410a",
+      "rule": "empirical_step"
+    },
+    {
+      "reference": "2024 NSC Mathematics performance band",
+      "url": "https://www.education.gov.za/Portals/0/Documents/Reports/2024/2024%20NSC%20Diagnostics%20Book%201.pdf?ver=2025-02-07-130329-033",
+      "sha256": "4a7dc7bb0e3bbdc4fa02b708a28ad0fc5f1e81cc77a13aa343767dd6e1e09f8f",
+      "rule": "empirical_step"
+    }
+  ],
+  "publication_scope": "Aggregate score counts, retained reference distributions and app source only. No person-level records or manuscript/SI drafts."
+}
