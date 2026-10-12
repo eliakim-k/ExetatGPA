@@ -5,7 +5,7 @@
   "source": "https://github.com/eliakim-k/ExetatGPA",
   "cv_entry": "https://eliakimkambale.com/contributions/#software",
   "cv_destination": "https://github.com/eliakim-k/ExetatGPA",
-  "pages_deployment": "9c9dd87a-903d-45d8-8164-07589e587bc4",
+  "pages_deployment": "26322b80-9f05-44f2-bbaf-5659cb961c61",
   "cv_commit": "4f00492a1347b86bb11234eacc477cfe09371d95",
   "numerical_tests": 9,
   "production_http_checks": 29,
@@ -37,5 +37,27 @@
   "total_app_tests": 12,
   "account_tagline_removed": true,
   "translation_scope": "Calculator interface, results and interpretation. Original reference descriptions, scale notation and detailed methods retained in English with visible disclosure.",
-  "linguistic_review": "Drafted and self-reviewed; no independent native-speaker proofreading."
+  "linguistic_review": "Drafted and self-reviewed; no independent native-speaker proofreading.",
+  "language_order": [
+    "en",
+    "fr",
+    "ja",
+    "ko",
+    "zh",
+    "de",
+    "tr",
+    "ln",
+    "sw",
+    "es",
+    "pt",
+    "hi",
+    "ar",
+    "bn",
+    "ru",
+    "ur",
+    "id",
+    "zu",
+    "af"
+  ],
+  "default_language": "en"
 }

@@ -1,8 +1,8 @@
 import test from 'node:test';import assert from 'node:assert/strict';import {readFile} from 'node:fs/promises';
-import {locales,message} from '../src/locales.mjs';
+import {locales,message,languageOrder} from '../src/locales.mjs';
 const expected=['en','fr','ja','ko','de','tr','zh','es','hi','ar','pt','bn','ru','ur','id','sw','ln','zu','af'];
 test('all 19 approved languages have complete, nonempty catalogs and identical scientific interpolation slots',()=>{
- assert.deepEqual(Object.keys(locales),expected);const base=locales.en.text;
+ assert.deepEqual(Object.keys(locales),expected);assert.deepEqual(languageOrder,['en','fr','ja','ko','zh','de','tr','ln','sw','es','pt','hi','ar','bn','ru','ur','id','zu','af']);assert.deepEqual([...languageOrder].sort(),[...expected].sort());const base=locales.en.text;
  for(const [code,l]of Object.entries(locales)){assert.deepEqual(Object.keys(l.text),Object.keys(base),code);assert.equal(l.countries.length,8);assert.equal(l.text.scope.split(' · ').length,2,'Account tagline removed');assert.equal(l.dir,['ar','ur'].includes(code)?'rtl':'ltr');
   for(const [k,s]of Object.entries(l.text)){assert(s.trim(),code+'/'+k);assert(!s.includes('—'),code+'/'+k);assert(!/[<>]/.test(s),code+'/'+k);assert.deepEqual([...s.matchAll(/\{\w+\}/g)].map(m=>m[0]).sort(),[...base[k].matchAll(/\{\w+\}/g)].map(m=>m[0]).sort(),code+'/'+k);}
   assert.equal(new Intl.NumberFormat(code).resolvedOptions().style,'decimal');

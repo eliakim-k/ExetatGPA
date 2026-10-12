@@ -1,5 +1,5 @@
 import {position,referenceResults,sessionMatch,format} from './engine.mjs';
-import {locales,message} from './locales.mjs';
+import {locales,message,languageOrder} from './locales.mjs';
 const $=id=>document.getElementById(id),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const requested=new URL(location.href).searchParams.get('lang');
 let data,language=Object.hasOwn(locales,requested)?requested:'en';
@@ -27,7 +27,7 @@ function translate(){
  document.title='ExetatGPA | '+t('title').replace('\n',' ');
  if(data)render();
 }
-for(const [code,l]of Object.entries(locales)){const option=document.createElement('option');option.value=code;option.lang=code;option.dir=l.dir;option.textContent=l.name;$('language').append(option);}
+for(const code of languageOrder){const l=locales[code],option=document.createElement('option');option.value=code;option.lang=code;option.dir=l.dir;option.textContent=l.name;$('language').append(option);}
 $('language').addEventListener('change',()=>{language=$('language').value;const url=new URL(location.href);url.searchParams.set('lang',language);history.replaceState(null,'',url);translate();});
 $('calculator').addEventListener('submit',e=>{e.preventDefault();render();});
 function example(year,score,target){$('year').value=year;$('score').value=score;$('target-year').value=target;render();}
