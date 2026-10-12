@@ -35,3 +35,11 @@ The published-success position and represented-participant missing-score bounds 
 Public assets are explicitly allowlisted by `build.mjs`. Manuscripts, Supplementary Information, person-level data, credentials, private research folders, CMS data and authentication configuration are excluded. The app publication is separate from paper approval and release. Original scientific units remain unchanged.
 
 © 2026 Eliakim Mathias Kambale. No new license grant is asserted for third-party reference data; source identities are retained. Hosting and source publication are authorized. The website's visitor password and owner editor are managed separately from this public app.
+
+## Languages (1.1.0)
+
+The calculator interface and result interpretation support English, French, Japanese, Korean, German, Turkish, Simplified Chinese, Spanish, Hindi, Arabic, Portuguese, Bengali, Russian, Urdu, Indonesian, Swahili, Lingala, Zulu and Afrikaans. A native-name language menu is provided. Arabic and Urdu use right-to-left layouts; numerical outputs are isolated to preserve their ordering. A language can be linked with `?lang=ar`, for example. Language is the only URL parameter written by the app; scores are not saved or transmitted.
+
+Language coverage was selected by the author for reference-population, international and Congolese audiences. It is not a complete global speaker ranking. The 47-key catalogs translate controls, results, uncertainty explanations and interpretation limits. Original scientific reference descriptions, named scale labels and the detailed methods page remain in English, disclosed beside the introduction and in source-detail headings. Grade/category labels are kept in the reference scale's notation. Language selection does not add a numerical reference for the language's country or change any calculations.
+
+Translations were drafted and self-reviewed. They have not received independent native-speaker proofreading. Catalog tests verify completeness and preserved interpolation fields; they do not certify linguistic quality. All 19 languages were checked at 320-pixel mobile width, with eight unchanged reference results and no horizontal overflow. The retained numerical test suite remains applicable.
