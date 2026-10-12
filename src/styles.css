@@ -11,3 +11,5 @@ h1{white-space:pre-line}.language-control{display:flex;align-items:center;gap:8p
 #language:hover{border-color:var(--teal);background:white}
 #language:focus-visible{outline:3px solid #d38622;outline-offset:3px}
 @media(max-width:680px){#language{width:176px}.language-control{max-width:100%}}
+
+footer .footer-credit{display:block}footer .footer-credit .copyright{margin-top:4px;color:var(--muted)}
