@@ -5,7 +5,7 @@
   "source": "https://github.com/eliakim-k/ExetatGPA",
   "cv_entry": "https://eliakimkambale.com/contributions/#software",
   "cv_destination": "https://github.com/eliakim-k/ExetatGPA",
-  "pages_deployment": "8ae97886-f38b-4a44-a9ad-784b4778e8ac",
+  "pages_deployment": "1e092506-d3cf-4e13-be89-a805e7c42ea0",
   "cv_commit": "4f00492a1347b86bb11234eacc477cfe09371d95",
   "numerical_tests": 9,
   "production_http_checks": 29,
@@ -69,6 +69,7 @@
   },
   "footer_lines": [
     "ExetatGPA · 1.1.0",
-    "© 2026 Eliakim Mathias Kambale"
-  ]
+    "© 2026 Eliakim M. Kambale"
+  ],
+  "displayed_author": "Eliakim M. Kambale"
 }

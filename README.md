@@ -34,7 +34,7 @@ The published-success position and represented-participant missing-score bounds 
 
 Public assets are explicitly allowlisted by `build.mjs`. Manuscripts, Supplementary Information, person-level data, credentials, private research folders, CMS data and authentication configuration are excluded. The app publication is separate from paper approval and release. Original scientific units remain unchanged.
 
-© 2026 Eliakim Mathias Kambale. No new license grant is asserted for third-party reference data; source identities are retained. Hosting and source publication are authorized. The website's visitor password and owner editor are managed separately from this public app.
+© 2026 Eliakim M. Kambale. No new license grant is asserted for third-party reference data; source identities are retained. Hosting and source publication are authorized. The website's visitor password and owner editor are managed separately from this public app.
 
 ## Languages (1.1.0)
 
