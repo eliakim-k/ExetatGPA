@@ -4349,7 +4349,7 @@
       "label": "England summer 2024 A-level outcomes",
       "precision": 0,
       "rule": "empirical_step",
-      "limitation": "The official publisher rejected direct file download, so the exact all-subject England row was retained with an Ofqual cross-check.",
+      "limitation": "Subject entries across all A-level subjects in England; these results describe entries rather than an overall student grade.",
       "source_sha256": "a501385863aefd690330f33115fc1956c9bdecaee9d26dca3eb14bd966b1de2e",
       "source_url": "https://www.jcq.org.uk/wp-content/uploads/sites/2/2026/01/AS-and-A-level-results-summer-2024.pdf"
     },

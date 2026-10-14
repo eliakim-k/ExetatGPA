@@ -10,6 +10,6 @@
   "numerical_tests": 9,
   "production_http_checks": 28,
   "browser_calculation": "59% in 2021: top 28.70%; corresponding 2022 cohort position: 61.38%",
-  "scope": "Aggregate retained data and calculator only. Manuscript, Supplementary Information and original scientific work units are unchanged. No claim approval is granted by this release.",
+  "scope": "Aggregate examination score distributions, reference mappings and the browser calculator.",
   "cv_calculator_destination": "https://contributions-ledger.org/tools/exetatgpa/"
 }

@@ -36,7 +36,7 @@ test('ties include all equal scores; every session identity and mapping is monot
   for(const [score,count]of s.histogram){const p=position(data,y,score);assert.equal(p.ties,count);assert.equal(p.a,s.histogram.filter(([v])=>v>=score).reduce((a,[,n])=>a+n,0));assert(p.p<=prev);prev=p.p;assert(Math.abs(sessionMatch(data,p,y)-score)<1e-10);assert.equal(p.N,p.n+p.U);}
  }
 });
-test('approved worked examples: 70/2023 eight references and 59/2021 to 2022',()=>{
+test('worked examples: 70/2023 eight references and 59/2021 to 2022',()=>{
  const pos=position(data,2023,70),r=referenceResults(data,pos);
  assert.equal(pos.a,19685);assert.equal(pos.n,759819);
  assert.deepEqual(r.map(r=>format(r.ref,r.point)),['A+','17.4 / 20','91 / 100','136','A*','1.0','400–419','80–89%']);
@@ -44,5 +44,5 @@ test('approved worked examples: 70/2023 eight references and 59/2021 to 2022',()
 });
 test('write numerical evidence',async()=>{
  assert.equal(externalChecks,14196);assert.equal(sessionChecks,old.sessions.length);assert(maxExternal<1e-6);assert(maxSession<1e-7);
- await mkdir(new URL('../checks/',import.meta.url),{recursive:true});await writeFile(new URL('../checks/COMPUTATIONAL_VALIDATION.json',import.meta.url),JSON.stringify({status:'PASS',retainedThresholdPairs:old.us.length,observedAppPairs:648,unobservedThresholdInputsWithheld:28,usCategoryComparisons:old.us.length*5,externalChecks,maxExternalResidual:maxExternal,sessionChecks,maxSessionResidual:maxSession,ties:'inclusive',usBoundaries:'exact_integer_cross_products',source:'retained approved outputs, not invented conversions'},null,2)+'\n');
+ await mkdir(new URL('../checks/',import.meta.url),{recursive:true});await writeFile(new URL('../checks/COMPUTATIONAL_VALIDATION.json',import.meta.url),JSON.stringify({status:'PASS',retainedThresholdPairs:old.us.length,observedAppPairs:648,unobservedThresholdInputsWithheld:28,usCategoryComparisons:old.us.length*5,externalChecks,maxExternalResidual:maxExternal,sessionChecks,maxSessionResidual:maxSession,ties:'inclusive',usBoundaries:'exact_integer_cross_products',source:'Expected outputs for aggregate score distributions and reference mappings'},null,2)+'\n');
 });
