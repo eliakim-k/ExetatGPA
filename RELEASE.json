@@ -1,14 +1,14 @@
 {
-  "release": "1.1.0",
-  "date": "2026-10-12",
+  "release": "1.2.0",
+  "date": "2026-10-14",
   "calculator": "https://contributions-ledger.org/tools/exetatgpa/",
   "source": "https://github.com/eliakim-k/ExetatGPA",
   "cv_entry": "https://eliakimkambale.com/contributions/#software",
   "cv_destination": "https://github.com/eliakim-k/ExetatGPA",
-  "pages_deployment": "1e092506-d3cf-4e13-be89-a805e7c42ea0",
+  "pages_deployment": "5aa84b18-466f-453f-8bfe-1c4d3cb3b2d7",
   "cv_commit": "4f00492a1347b86bb11234eacc477cfe09371d95",
   "numerical_tests": 9,
-  "production_http_checks": 29,
+  "production_http_checks": 51,
   "browser_calculation": "59% in 2021: top 28.70%; corresponding 2022 cohort position: 61.38%",
   "scope": "Aggregate examination score distributions, reference mappings and the browser calculator.",
   "cv_calculator_destination": "https://contributions-ledger.org/tools/exetatgpa/",
@@ -33,8 +33,8 @@
     "zu",
     "af"
   ],
-  "catalog_keys": 47,
-  "total_app_tests": 12,
+  "catalog_keys": 53,
+  "total_app_tests": 14,
   "account_tagline_removed": true,
   "translation_scope": "Calculator interface, results and interpretation. Original reference descriptions, scale notation and detailed methods retained in English with visible disclosure.",
   "linguistic_review": "Translations have not undergone independent native-speaker proofreading.",
@@ -71,5 +71,10 @@
     "ExetatGPA · 1.1.0",
     "© 2026 Eliakim M. Kambale"
   ],
-  "displayed_author": "Eliakim M. Kambale"
+  "displayed_author": "Eliakim M. Kambale",
+  "app_source_commit": "fd4ff728df31b0270b2a4285ac2cd8af9ee7c2ec",
+  "interface": "Score sheet",
+  "language_label_above_selector": true,
+  "language_flags": true,
+  "drc_flag_map": true
 }

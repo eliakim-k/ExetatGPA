@@ -64,3 +64,7 @@ The repository contains aggregate EXETAT score counts and the external reference
 [tests/retained-results.json](tests/retained-results.json) contains expected outputs for numerical verification. The tests cover 676 threshold profiles, including 28 unobserved thresholds excluded from calculator input, 3,380 US category comparisons, 14,196 numerical comparisons for the other references, and 10,368 cross-session checks. Boundary handling, ties, unavailable inputs, and worked examples are also tested. The recorded numerical checks are summarized in [VALIDATION.json](VALIDATION.json).
 
 © 2026 Eliakim M. Kambale. Third-party reference data remain subject to their respective terms of use.
+
+## Score sheet (1.2.0)
+
+The interface uses a dark blue score sheet with editable scores, two worked examples, a cohort-position marker and eight separate reference records. The Language label sits above a keyboard-accessible flag menu. A DRC flag map appears beside the introduction; image sources and licenses are available through Image credits. Country flags serve as navigation cues for languages and do not select numerical reference scales. Unsupported scores clear the previous result immediately. The calculation engine, numerical inputs and interpretation limits remain unchanged.
