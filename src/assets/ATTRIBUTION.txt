@@ -1,0 +1,8 @@
+DRC flag map: Darwinek, Wikimedia Commons. CC BY-SA 3.0. Original image unchanged.
+https://commons.wikimedia.org/wiki/File:Flag_map_of_the_Democratic_Republic_of_the_Congo.svg
+https://creativecommons.org/licenses/by-sa/3.0/
+
+Country flags: flag-icons 7.3.2 by Panayiotis Lipiridis. MIT license, included as flag-icons-LICENSE.txt.
+https://github.com/lipis/flag-icons
+
+Flags are navigation cues for languages, not statements of exclusive national ownership or selectors for the numerical reference scales.

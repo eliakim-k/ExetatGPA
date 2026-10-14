@@ -1,47 +1,70 @@
 # ExetatGPA
 
-An EXETAT result is retained with its official percentage and examination session. Standing within the recovered published successful cohort is calculated, matched to another EXETAT session where supported, and expressed separately through eight named external reference distributions.
+ExetatGPA calculates the position of an EXETAT score within its examination session and maps that position to other EXETAT sessions and eight external reference distributions. EXETAT is the secondary school leaving examination in the Democratic Republic of the Congo. The official percentage and examination year are preserved alongside the calculated results.
 
-The running app is published at https://contributions-ledger.org/tools/exetatgpa/ . Its source repository is https://github.com/eliakim-k/ExetatGPA . These locations are release targets until the retained release record confirms verification.
+[Open the calculator](https://contributions-ledger.org/tools/exetatgpa/) · [Read the method and sources](https://contributions-ledger.org/tools/exetatgpa/methods.html)
 
-## Run
+## What the results mean
 
-Node.js 20 or later is sufficient. There are no npm dependencies.
+Positions are calculated separately for the 2008–2023 sessions from recovered published scores of successful candidates. The proportion of these scores at or above the selected score is reported, including all ties. A result of “top 2.59%” therefore means that 2.59% of the recovered published successful scores in that session were at least as high as the selected score.
 
-```text
+For example, 59% in EXETAT 2021 falls within the top 28.70% of that session's recovered published successful scores. The corresponding position in the 2022 distribution is reached at 61.38%. This correspondence describes relative standing within the two published score distributions; it does not establish equal knowledge or skills or predict an individual's result in another examination.
+
+Participants without a published exact score are considered separately. Within the recovered groups for which participant counts are available, lower and upper limits are calculated by placing all unpublished scores below or at or above the selected score. These limits describe uncertainty due to missing scores within those groups. They are neither confidence intervals nor national ranks, and they do not account for groups absent from the recovered data.
+
+## External references
+
+The same relative position is located separately in each of the following distributions. Each output retains the reference's population, scale, and published resolution.
+
+| Reference | Population and output |
+| --- | --- |
+| United States, 2016 pre-March SAT report | Reported high school grade point average (GPA) categories among GPA respondents: A+, A, A-minus, B, C, or D/E/F |
+| France, 2025 general baccalaureate | All-status candidates; final average on the 0–20 scale |
+| Japan, 2024 Common Test | Mathematics I/A main-session examinees; integer subject marks on the 0–100 scale |
+| South Korea, 2024 College Scholastic Ability Test (CSAT) | Mathematics examinees; standard score and grade band |
+| England, summer 2024 A-levels | Entries across all subjects; A*–U categories |
+| Germany, 2024 Abitur | National final-grade frequencies; lower grades indicate stronger outcomes |
+| Türkiye, 2024 Basic Proficiency Test (TYT) | Candidates with published scores of at least 100; score bands |
+| South Africa, 2024 National Senior Certificate (NSC) | Mathematics performance bands |
+
+These outputs express correspondence in distributional position. The populations and examinations differ, so the results do not establish equivalent educational attainment, curricula, or credentials. No numerical US GPA or combined international grade is calculated. For the US reference, the possible effect of missing GPA-category responses is shown separately and together with the EXETAT missing-score limits.
+
+Source links and the calculation rules for each reference are provided on the [method and sources page](https://contributions-ledger.org/tools/exetatgpa/methods.html).
+
+## Using the calculator
+
+Select an examination year and an observed integer score. The calculator accepts 648 observed year–score combinations from 2008 through 2023. Scores below 50, decimal scores, and scores absent from the selected session's recovered distribution are unavailable. A cross-session result is withheld when the requested position lies beyond the target session's observed range.
+
+The interface, results, and interpretation are available in 19 languages: English, French, Japanese, Korean, Chinese (Simplified), German, Turkish, Lingala, Swahili, Spanish, Portuguese, Hindi, Arabic, Bengali, Russian, Urdu, Indonesian, Zulu, and Afrikaans. English is the default; a link ending in `?lang=fr`, for example, opens the French interface. Arabic and Urdu use right-to-left layouts.
+
+Detailed methods, original reference descriptions, and scale labels remain in English or the reference's original notation. Translations have not received independent native-speaker proofreading. Changing the interface language leaves the calculations and available references unchanged.
+
+Scores are processed in the browser and are not saved, included in the URL, or transmitted to the host. No account is required. The host receives ordinary page requests.
+
+## Running locally
+
+Node.js 20 or later is required. There are no npm dependencies to install.
+
+```sh
+git clone https://github.com/eliakim-k/ExetatGPA.git
+cd ExetatGPA
 npm test
 npm run build
 npm run preview
 ```
 
-Open http://127.0.0.1:8790/ . Only `dist/` is deployed. Input selection is browser-local; no account, telemetry or score submission is used. The bilingual calculator has English and French labels; reference population/source descriptions remain in their documented English form. The methods page is in English.
+Open [http://127.0.0.1:8790/](http://127.0.0.1:8790/). The static website is generated in `dist/`.
 
-## Calculation and evidence
+## Data and reproducibility
 
-`src/engine.mjs` computes inclusive upper-tail positions from `data/annual_successful_score_histogram.csv` as encoded in `data/app-data.json`. Exact US category boundaries use integer cross-products. The other seven inverses preserve the retained interpolation or step rules, direction and display resolution. Cross-session interpolation is withheld outside target support. The browser accepts 648 actually observed integer session–score pairs. An additional 28 unobserved threshold values in the retained 676-pair reference outputs are withheld.
+The repository contains aggregate EXETAT score counts and the external reference distributions. No names or individual examination records are included. File hashes and source identities are recorded in [data/PROVENANCE.json](data/PROVENANCE.json).
 
-`data/PROVENANCE.json` identifies project-relative source paths, hashes, official external URLs and approvals used during extraction. Retained aggregate inputs include no names or individual records. `scripts/export_inputs.py` documents extraction from the governed paper project and requires its prospective not-used option-identity receipt. It is an extraction/audit utility, not required to run this standalone repository. Updating scientific inputs requires renewed source verification; the app must not silently retrieve revised online distributions.
+[src/engine.mjs](src/engine.mjs) calculates positions and reference outputs from [data/app-data.json](data/app-data.json). Cross-session matching uses linear interpolation between supported scores. External mappings use frequency-based interpolation or discrete categories and score bands, according to the reference. US category boundaries are evaluated with exact integer comparisons.
 
-`tests/retained-results.json` preserves numerical verification fixtures derived from governed outputs. Tests check all 676 retained threshold profiles, 3,380 US category assignments, 14,196 non-US numerical cells, all retained cross-session conversions and availability decisions, exact category boundaries, inclusive ties, unsupported inputs and the two approved worked examples. The calculation engine uses input distributions, not these expected outputs. `VALIDATION.json` records the completed numerical checks.
+[tests/retained-results.json](tests/retained-results.json) contains expected outputs for numerical verification. The tests cover 676 threshold profiles, including 28 unobserved thresholds excluded from calculator input, 3,380 US category comparisons, 14,196 numerical comparisons for the other references, and 10,368 cross-session checks. Boundary handling, ties, unavailable inputs, and worked examples are also tested. The recorded numerical checks are summarized in [VALIDATION.json](VALIDATION.json).
 
-## Interpretation
+© 2026 Eliakim M. Kambale. Third-party reference data remain subject to their respective terms of use.
 
-The eight external references are US 2016 pre-March SAT reported GPA categories; France 2025 general baccalaureate; Japan 2024 Common Test Mathematics I/A; South Korea 2024 CSAT Mathematics; England summer 2024 all-subject A-level entries; Germany 2024 national Abitur; Türkiye 2024 TYT published scores of at least 100; and South Africa 2024 NSC Mathematics bands. They are separate populations and scales.
+## Score sheet interface (1.2.0)
 
-The published-success position and represented-participant missing-score bounds are shown separately. US target-category nonresponses are separately bounded and also combined with source bounds. These are not confidence intervals or national ranks. Correspondence in cohort standing does not establish equal educational attainment, equivalent knowledge, grades, curricula or credentials, and does not estimate the same person's score in another examination. No numerical US GPA is produced.
-
-## Publication scope
-
-Public assets are explicitly allowlisted by `build.mjs`. Manuscripts, Supplementary Information, person-level data, credentials, private research folders, CMS data and authentication configuration are excluded. The app publication is separate from paper approval and release. Original scientific units remain unchanged.
-
-© 2026 Eliakim M. Kambale. No new license grant is asserted for third-party reference data; source identities are retained. Hosting and source publication are authorized. The website's visitor password and owner editor are managed separately from this public app.
-
-## Languages (1.1.0)
-
-The calculator interface and result interpretation support English, French, Japanese, Korean, German, Turkish, Simplified Chinese, Spanish, Hindi, Arabic, Portuguese, Bengali, Russian, Urdu, Indonesian, Swahili, Lingala, Zulu and Afrikaans. A native-name language menu is provided. Arabic and Urdu use right-to-left layouts; numerical outputs are isolated to preserve their ordering. A language can be linked with `?lang=ar`, for example. Language is the only URL parameter written by the app; scores are not saved or transmitted.
-
-Language coverage was selected by the author for reference-population, international and Congolese audiences. It is not a complete global speaker ranking. The 47-key catalogs translate controls, results, uncertainty explanations and interpretation limits. Original scientific reference descriptions, named scale labels and the detailed methods page remain in English, disclosed beside the introduction and in source-detail headings. Grade/category labels are kept in the reference scale's notation. Language selection does not add a numerical reference for the language's country or change any calculations.
-
-Translations were drafted and self-reviewed. They have not received independent native-speaker proofreading. Catalog tests verify completeness and preserved interpolation fields; they do not certify linguistic quality. All 19 languages were checked at 320-pixel mobile width, with eight unchanged reference results and no horizontal overflow. The retained numerical test suite remains applicable.
-
-The language menu starts with English (the default), French, Japanese, Korean, Chinese, German, Turkish, Lingala, Swahili, Spanish and Portuguese. The remaining entries are Hindi, Arabic, Bengali, Russian, Urdu, Indonesian, Zulu and Afrikaans. An explicit `?lang=` URL retains the selected language; the plain calculator URL opens in English.
+Dark blue score sheet approved on 2026-10-14. The Language label remains above the flag-equipped language selector. A licensed DRC flag map appears beside the introduction. Inputs remain editable; the two retained worked examples are also available. Source-bound intervals, reference populations and interpretation limits remain available. Unsupported input clears prior results immediately. No numerical engine or retained input has changed. Flags are language navigation cues, not reference-scale selectors. New short interface strings are drafted translations without independent native-speaker review.
