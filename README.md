@@ -19,7 +19,7 @@ The same relative position is located separately in each of the following distri
 | Reference | Population and output |
 | --- | --- |
 | United States, 2016 pre-March SAT report | Reported high school grade point average (GPA) categories among GPA respondents: A+, A, A-minus, B, C, or D/E/F |
-| France, 2025 general baccalaureate | All-status candidates; final average on the 0–20 scale |
+| France, 2025 general baccalaureate | Candidates of all registration statuses; final average on the 0–20 scale |
 | Japan, 2024 Common Test | Mathematics I/A main-session examinees; integer subject marks on the 0–100 scale |
 | South Korea, 2024 College Scholastic Ability Test (CSAT) | Mathematics examinees; standard score and grade band |
 | England, summer 2024 A-levels | Entries across all subjects; A*–U categories |
@@ -64,7 +64,3 @@ The repository contains aggregate EXETAT score counts and the external reference
 [tests/retained-results.json](tests/retained-results.json) contains expected outputs for numerical verification. The tests cover 676 threshold profiles, including 28 unobserved thresholds excluded from calculator input, 3,380 US category comparisons, 14,196 numerical comparisons for the other references, and 10,368 cross-session checks. Boundary handling, ties, unavailable inputs, and worked examples are also tested. The recorded numerical checks are summarized in [VALIDATION.json](VALIDATION.json).
 
 © 2026 Eliakim M. Kambale. Third-party reference data remain subject to their respective terms of use.
-
-## Score sheet interface (1.2.0)
-
-Dark blue score sheet approved on 2026-10-14. The Language label remains above the flag-equipped language selector. A licensed DRC flag map appears beside the introduction. Inputs remain editable; the two retained worked examples are also available. Source-bound intervals, reference populations and interpretation limits remain available. Unsupported input clears prior results immediately. No numerical engine or retained input has changed. Flags are language navigation cues, not reference-scale selectors. New short interface strings are drafted translations without independent native-speaker review.
